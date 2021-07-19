@@ -29,12 +29,12 @@ var fs = __importStar(require("fs"));
 var path = __importStar(require("path"));
 function readDocuments(filePath) {
     var documentsDataPath = path.join.apply(path, __spreadArray([process.cwd()], filePath));
-    var result = fs
+    var data = fs
         .readFileSync(documentsDataPath, {
         encoding: "utf-8",
     })
         .trim()
         .split(" ");
-    return result;
+    return data;
 }
 exports.readDocuments = readDocuments;
